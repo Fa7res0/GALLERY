@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+    list-style: none;
+
+    position: relative;
+}
+
+body{
+    height: 100vh;
+    max-width: 100svw;
+    font-family: "Indie Flower", cursive;
+    display: grid;
+    grid-template-columns:1fr 4fr ;
+    grid-template-rows:70px 1fr 90px ;
+    grid-template-areas: 
+    "h h"
+    "as images"
+    "as footer"
+    ;
+}
+
+header{
+    display: flex;
+    padding: 10px 30px;
+    background-color: rgb(12, 36, 65);
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: h;
+}
+
+header nav ul{
+    display: flex;
+    gap: 10px;
+}
+
+aside{
+    background-color: rgb(61, 89, 124);
+    border-radius: 0 20px 0 0;
+    color: white;
+    padding: 10px;
+    grid-area: as;
+}
+
+aside p{
+    margin: 20px 0px;
+}
+
+aside ul li{
+    margin: 10px 0px;
+}
+
+section h2{
+    padding: 10px;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
+    
+}
+footer{
+    background-color: rgb(12, 36, 65);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    grid-area: footer;
+}
+
+.images div{
+    border-radius: 10px;
+    padding: 10px;
+} 
+
+img{
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+@media(max-width:768px){
+    aside{
+        display: none;
+    }
+    body{
+        grid-template-columns: 1fr;
+         grid-template-areas: 
+    "h"
+    " images"
+    " footer"
+    ;
+    }
+
+}
